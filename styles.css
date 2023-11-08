@@ -12,3 +12,23 @@
 .galeria img:hover {
     transform: scale(1.1);
 }
+
+#slider {
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+}
