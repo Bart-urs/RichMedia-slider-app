@@ -15,14 +15,18 @@ window.onload = function() {
 
     function nextSlide() {
         slides[index].classList.remove('active');
-        index = (index + 1) % slides.length; // Wraca do pierwszego slajdu po ostatnim
+        slides[index].style.transform = 'translateX(-100%)'; // Dodaj tę linię
+        index = (index + 1) % slides.length; 
         slides[index].classList.add('active');
+        slides[index].style.transform = 'translateX(0)'; // Dodaj tę linię
     }
 
     function prevSlide() {
         slides[index].classList.remove('active');
-        index = (index - 1 + slides.length) % slides.length; // Wraca do ostatniego slajdu po pierwszym
+        slides[index].style.transform = 'translateX(100%)'; // Dodaj tę linię
+        index = (index - 1 + slides.length) % slides.length; 
         slides[index].classList.add('active');
+        slides[index].style.transform = 'translateX(0)'; // Dodaj tę linię
     }
 
     // Przewijanie slajdów co 3 sekundy
