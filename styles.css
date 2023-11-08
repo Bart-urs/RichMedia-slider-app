@@ -1,0 +1,14 @@
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.galeria img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+.galeria img:hover {
+    transform: scale(1.1);
+}
